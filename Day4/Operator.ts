@@ -33,3 +33,9 @@ console.log("Age group:", ageMessage);
 // Nullish coalescing uses the fallback only for null or undefined.
 const displayName: string | null = null;
 console.log("Name:", displayName ?? "Guest");
+
+//Strict equality checks both value and type.
+const value1: number = 5;
+const value2: string = "5";
+console.log("Strict equality:", value1 === value2); // false
+console.log("Loose equality:", value1 == value2); // true
