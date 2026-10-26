@@ -39,3 +39,10 @@ const value1: number = 5;
 const value2: string = "5";
 console.log("Strict equality:", value1 === value2); // false
 console.log("Loose equality:", value1 == value2); // true
+
+//Inequality operators check for non-equality.
+console.log("Is value1 less than or equal to value2?", value1 <= Number(value2)); // true 
+//both Inequality operators and strict equality operators are used to compare values in TypeScript, but they differ in how they handle type coercion.
+console.log("Is value1 not equal to value2?", value1 != value2); // false
+console.log("Is value1 not equal to value2?", value1 !== value2); // true
+
