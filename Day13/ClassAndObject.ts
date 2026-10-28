@@ -47,10 +47,15 @@ console.log("Intersection type object:", employee);
 
 // A class defines a blueprint; `new` creates an instance object.
 class Car {
+     public make: string;
+    public model: string;
     constructor(
-        public make: string,
-        public model: string,
-    ) {}
+        make: string,
+        model: string,
+    ) {
+        this.make = make;
+        this.model = model;
+    }
 
     describe(): string {
         return `${this.make} ${this.model}`;
@@ -79,3 +84,32 @@ function createPoint(x: number, y: number): { x: number; y: number } {
 
 const point = createPoint(3, 7);
 console.log("Factory function:", point);
+
+//class with readonly properties
+class Circle {
+    constructor(
+        public readonly radius: number,
+        public readonly color: string
+    ) {}
+
+    area(): number {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+const circle = new Circle(5, "red");
+console.log("Circle area:", circle.area());
+console.log("Circle color:", circle.color);
+
+//static properties and methods
+class MathUtils {
+    static readonly PI: number = 3.14159;
+
+    static calculateCircumference(radius: number): number {
+        return 2 * MathUtils.PI * radius;
+    }
+}
+
+console.log("MathUtils.PI:", MathUtils.PI);
+console.log("Circumference of circle with radius 5:", MathUtils.calculateCircumference(5));
+
