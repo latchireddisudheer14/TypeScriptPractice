@@ -42,6 +42,3 @@ console.log("Substring (5, 15):", trimmedMessage.substring(5, 15));
 
 // charAt returns the character at a specific index.
 console.log("Character at index 10:", trimmedMessage.charAt(10));
-
-//includes checks if a string contains a specific substring.
-console.log("Includes 'handling':", trimmedMessage.includes("handling"));
